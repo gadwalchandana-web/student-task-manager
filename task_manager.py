@@ -4,7 +4,8 @@ while True:
     print("\n--- Student Task Manager ---")
     print("1. Add Task")
     print("2. View Tasks")
-    print("3. Exit")
+    print("3. Delete Task")
+    print("4. Exit")
 
     choice = input("Enter your choice: ")
 
@@ -22,6 +23,22 @@ while True:
                 print(i, ".", task)
 
     elif choice == "3":
+        if len(tasks) == 0:
+            print("No tasks available.")
+        else:
+            print("\nYour Tasks:")
+            for i, task in enumerate(tasks, 1):
+                print(i, ".", task)
+
+            number = int(input("Enter task number to delete: "))
+
+            if 1 <= number <= len(tasks):
+                deleted_task = tasks.pop(number - 1)
+                print(deleted_task, "deleted successfully!")
+            else:
+                print("Invalid task number.")
+
+    elif choice == "4":
         print("Thank you!")
         break
 
