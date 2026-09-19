@@ -6,6 +6,7 @@ A simple task management application built using Python.
 
 - Add new tasks
 - View all tasks
+- Delete tasks
 - Exit the application
 - Simple command-line interface
 
